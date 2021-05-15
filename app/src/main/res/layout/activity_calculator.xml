@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:layout_margin="@dimen/default_margin_20dp"
+        android:gravity="end|bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/buttonsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_20dp"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnC"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_c"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_one"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_two"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_three"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_15dp"
+                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
+                android:layout_marginBottom="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_multiply"
+                android:textStyle="bold"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_four"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/BtnFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_five"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_six"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_15dp"
+                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
+                android:layout_marginBottom="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_divide"
+                android:textStyle="bold"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_seven"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_eight"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_nine"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_15dp"
+                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
+                android:layout_marginBottom="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_plus"
+                android:textStyle="bold"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btnComma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_comma"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_zero"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_result"
+                android:textStyle="bold"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_15dp"
+                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
+                android:layout_marginBottom="@dimen/default_margin_5dp"
+                android:layout_weight="1.0"
+                android:text="@string/calc_btn_minus"
+                android:textStyle="bold"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </TableRow>
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

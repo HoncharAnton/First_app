@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">First app</string>
+
+    <!--main Button-->
+    <string name="main_btn_calc_title">Calculator</string>
+    <string name="main_btn_gallery_title">Gallery</string>
+    <string name="main_btn_tiles_title">Tiles menu</string>
+    <string name="main_calendar_title">holiday calendar</string>
+    <string name="main_btn_animation_title">Lottie animation</string>
+    <string name="main_btn_cat_title">cats list</string>
+
+    <!-- calc Button -->
+    <string name="calc_btn_minus">-</string>
+    <string name="calc_btn_result">=</string>
+    <string name="calc_btn_zero">0</string>
+    <string name="calc_btn_c">C</string>
+    <string name="calc_btn_plus">+</string>
+    <string name="calc_btn_nine">9</string>
+    <string name="calc_btn_eight">8</string>
+    <string name="calc_btn_seven">7</string>
+    <string name="calc_btn_divide">/</string>
+    <string name="calc_btn_six">6</string>
+    <string name="calc_btn_five">5</string>
+    <string name="calc_btn_four">4</string>
+    <string name="calc_btn_multiply">*</string>
+    <string name="calc_btn_three">3</string>
+    <string name="calc_btn_two">2</string>
+    <string name="calc_btn_one">1</string>
+    <string name="calc_btn_comma">,</string>
+    <string name="calc_def_comma">.</string>
+
+    <!-- error massage -->
+    <string name="wrong_math_sequence">Error! Check expression!</string>
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llBtnGroup"
+            android:layout_margin="@dimen/default_margin_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnCalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:text="@string/main_btn_calc_title" />
+
+            <Button
+                android:id="@+id/btnPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="false"
+                android:text="@string/main_btn_gallery_title" />
+
+            <Button
+                android:id="@+id/btnTilesMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="false"
+                android:text="@string/main_btn_tiles_title" />
+
+            <Button
+                android:id="@+id/btnCatsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="false"
+                android:text="@string/main_btn_cat_title" />
+
+            <Button
+                android:id="@+id/btnCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="false"
+                android:text="@string/main_calendar_title" />
+
+            <Button
+                android:id="@+id/btnAnim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="false"
+                android:text="@string/main_btn_animation_title" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
