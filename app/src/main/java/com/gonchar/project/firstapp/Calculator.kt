@@ -1,7 +1,6 @@
 package com.gonchar.project.firstapp
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.gonchar.project.firstapp.calc.calc.CalcCore
@@ -10,8 +9,7 @@ import com.gonchar.project.firstapp.calc.calc.PolishNotation
 import com.gonchar.project.firstapp.calc.calc.StringParsing
 import com.gonchar.project.firstapp.databinding.ActivityCalculatorBinding
 import com.gonchar.project.firstapp.utils.Constants.Companion.DEFAULT_ERROR_CODE
-import com.gonchar.project.firstapp.utils.Constants.Companion.TAG
-import com.gonchar.project.firstapp.utils.Utils
+import com.gonchar.project.firstapp.utils.showErrMessage
 
 class Calculator : AppCompatActivity(), View.OnClickListener {
 
@@ -23,12 +21,11 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calculator)
 
         binding = ActivityCalculatorBinding.inflate(layoutInflater)
         initListener()
         setContentView(binding.root)
-
+        title = getString(R.string.calc_tb_title)
     }
 
     /**
@@ -67,24 +64,14 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
             R.id.btnEight -> expression.append(getString(R.string.calc_btn_eight))
             R.id.btnNine -> expression.append(getString(R.string.calc_btn_nine))
             R.id.btnZero -> expression.append(getString(R.string.calc_btn_zero))
-            R.id.btnDivide -> {
-                symbolAppend(getString(R.string.calc_btn_divide), getString(R.string.wrong_math_sequence))
-            }
-            R.id.btnMultiply -> {
-                symbolAppend(getString(R.string.calc_btn_multiply), getString(R.string.wrong_math_sequence))
-            }
-            R.id.btnMinus -> {
-                symbolAppend(getString(R.string.calc_btn_minus), getString(R.string.wrong_math_sequence))
-            }
-            R.id.btnPlus -> {
-                symbolAppend(getString(R.string.calc_btn_plus), getString(R.string.wrong_math_sequence))
-            }
-            R.id.btnComma -> {
-                symbolAppend(getString(R.string.calc_def_comma), getString(R.string.wrong_math_sequence))
-            }
+            R.id.btnDivide -> symbolAppend(getString(R.string.calc_btn_divide), getString(R.string.wrong_math_sequence))
+            R.id.btnMultiply -> symbolAppend(getString(R.string.calc_btn_multiply), getString(R.string.wrong_math_sequence))
+            R.id.btnMinus -> symbolAppend(getString(R.string.calc_btn_minus), getString(R.string.wrong_math_sequence))
+            R.id.btnPlus -> symbolAppend(getString(R.string.calc_btn_plus), getString(R.string.wrong_math_sequence))
+            R.id.btnComma -> symbolAppend(getString(R.string.calc_def_comma), getString(R.string.wrong_math_sequence))
             R.id.btnC -> expression.clear()
             R.id.btnResult -> {
-                val rExp = StringParsing().parsString(expression);
+                val rExp = StringParsing().parsString(expression)
                 expression.clear()
                 expression.append(calculate.calc(PolishNotation().makeSequence(rExp)))
             }
@@ -100,7 +87,7 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
      */
     private fun symbolAppend(symbol: String, eMessage: String) {
         if (ec.symbolEditor(expression, symbol) == DEFAULT_ERROR_CODE) {
-            Utils().showErrMessage(eMessage, this)
+            showErrMessage(eMessage, this)
         }
     }
 }

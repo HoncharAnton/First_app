@@ -14,14 +14,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         val main = binding
         initListener(main)
 
         setContentView(main.root)
-
+        title = getString(R.string.main_tb_title)
     }
 
     /**

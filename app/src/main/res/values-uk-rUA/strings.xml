@@ -2,13 +2,17 @@
 <resources>
     <string name="app_name">Перший додаток</string>
 
-    <!--main Button-->
+    <!--main -->
     <string name="main_btn_calc_title">Калькулятор</string>
     <string name="main_btn_gallery_title">Галерея</string>
     <string name="main_btn_tiles_title">Плитки</string>
     <string name="main_calendar_title">Календар свят</string>
     <string name="main_btn_animation_title">Lottie анімація</string>
     <string name="main_btn_cat_title">Котейковий список</string>
+    <string name="main_tb_title">Меню</string>
+
+    <!--calc -->
+    <string name="calc_tb_title">Калькулятор</string>
 
     <!-- error massage -->
     <string name="wrong_math_sequence">Помилка! Перевірте правильність виразу!</string>

@@ -3,7 +3,6 @@ package com.gonchar.project.firstapp.calc.calc
 import com.gonchar.project.firstapp.utils.Constants.Companion.DEFAULT_ERROR_CODE
 import com.gonchar.project.firstapp.utils.Constants.Companion.EMPTY_STRING
 import java.lang.StringBuilder
-import java.lang.System.exit
 import kotlin.system.exitProcess
 
 class StringParsing {

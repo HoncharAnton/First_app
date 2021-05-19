@@ -6,45 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".Calculator">
 
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="10"
-        android:layout_margin="@dimen/default_margin_20dp"
-        android:gravity="end|bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TableLayout
-        android:id="@+id/buttonsGroup"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/default_margin_20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <TableRow
+        <TextView
+            android:id="@+id/tvResult"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_20dp"
+            android:gravity="end|bottom"
+            android:lines="10"
+            android:textSize="@dimen/calc_text_size_20sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btnC"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_c"
-                android:textStyle="bold" />
-        </TableRow>
+        <Button
+            android:id="@+id/btnC"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:text="@string/calc_btn_c"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnOne"
@@ -75,6 +71,7 @@
 
             <Button
                 android:id="@+id/btnMultiply"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_15dp"
@@ -83,13 +80,13 @@
                 android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_multiply"
-                android:textStyle="bold"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-        </TableRow>
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnFour"
@@ -120,6 +117,7 @@
 
             <Button
                 android:id="@+id/btnDivide"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_15dp"
@@ -128,13 +126,13 @@
                 android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_divide"
-                android:textStyle="bold"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-        </TableRow>
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnSeven"
@@ -165,6 +163,7 @@
 
             <Button
                 android:id="@+id/btnPlus"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_15dp"
@@ -173,14 +172,13 @@
                 android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_plus"
-                android:textStyle="bold"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-        </TableRow>
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnComma"
@@ -202,16 +200,17 @@
 
             <Button
                 android:id="@+id/btnResult"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_result"
-                android:textStyle="bold"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnMinus"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_15dp"
@@ -220,10 +219,9 @@
                 android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_minus"
-                android:textStyle="bold"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-        </TableRow>
-    </TableLayout>
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
