@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_20dp"
-                android:enabled="false"
+                android:enabled="true"
                 android:text="@string/main_btn_gallery_title" />
 
             <Button

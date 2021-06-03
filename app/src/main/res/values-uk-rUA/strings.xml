@@ -14,6 +14,9 @@
     <!--calc -->
     <string name="calc_tb_title">Калькулятор</string>
 
+    <!-- gallery -->
+    <string name="gal_tb_title">Гадерея</string>
+
     <!-- error massage -->
     <string name="wrong_math_sequence">Помилка! Перевірте правильність виразу!</string>
 </resources>

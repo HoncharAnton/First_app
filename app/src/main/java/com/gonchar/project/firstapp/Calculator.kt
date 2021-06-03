@@ -19,6 +19,7 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
     private val calculate = CalcCore()
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Log.d(TAG, "calculator button")
             }
             R.id.btnPic -> {
+                startActivity(Intent(this, Gallery::class.java))
                 Log.d(TAG, "Gallery button")
             }
             R.id.btnTilesMenu -> {

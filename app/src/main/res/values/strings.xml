@@ -32,6 +32,9 @@
     <string name="calc_def_comma">.</string>
     <string name="calc_tb_title">Calculator</string>
 
+    <!-- gallery -->
+    <string name="gal_tb_title">Gallery</string>
+
     <!-- error massage -->
     <string name="wrong_math_sequence">Error! Check expression!</string>
 

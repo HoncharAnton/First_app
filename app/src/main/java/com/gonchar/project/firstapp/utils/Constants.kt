@@ -17,5 +17,9 @@ class Constants {
 
         const val MINUS = "-"
 
+        const val REQUEST_CODE = 99
+
+        const val DEFAULT_H_W_VALUE = 300
+
     }
 }

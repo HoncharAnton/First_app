@@ -131,7 +131,7 @@ class CalcCore {
     }
 
     /**
-     * This is a repetitive part of the actions to perform a calculation.
+     * This  is a repetitive part of the actions to perform a calculation.
      * @param result it is result of calculation some operation
      * @param a it is iterator
      * @param polishNotation it is array list with expression in polish notation format
