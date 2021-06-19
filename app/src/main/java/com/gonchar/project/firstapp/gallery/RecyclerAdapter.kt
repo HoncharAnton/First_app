@@ -1,5 +1,7 @@
 package com.gonchar.project.firstapp.gallery
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.util.Log
 import android.view.View
@@ -40,6 +42,7 @@ class RecyclerAdapter(imageURI: ArrayList<Uri>) :
         }
 
         fun bindPhoto(photo: Uri) {
+            //val bm : Bitmap = BitmapFactory.decodeStream(photo)
             view.findViewById<ImageView>(R.id.holder).setImageURI(photo)
         }
 

@@ -5,7 +5,7 @@ import com.gonchar.project.firstapp.utils.Constants.Companion.EMPTY_STRING
 import java.lang.StringBuilder
 import kotlin.system.exitProcess
 
-class StringParsing {
+class StringParser {
     private val parsLines: ArrayList<ArrayList<Char>> = ArrayList()
 
     /**
@@ -19,7 +19,7 @@ class StringParsing {
      * @param line character array list with all symbols if the user value
      * @return array list with string where string is one element of the user expression
      */
-    fun parsString(line: StringBuilder): ArrayList<String> {
+    fun makeTempString(line: StringBuilder): ArrayList<String> {
         val expression: ArrayList<String> = ArrayList()
         var element = EMPTY_STRING
         var a = 0

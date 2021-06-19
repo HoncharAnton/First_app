@@ -1,227 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calculator">
+    android:gravity="bottom"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent">
 
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_20dp"
+        android:gravity="end|bottom"
+        android:lines="10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/calc_text_size_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="2.5"/>
+
+    <Button
+        android:id="@+id/btnC"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/default_margin_5dp"
+        android:text="@string/calc_btn_c"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin_20dp"
-            android:gravity="end|bottom"
-            android:lines="10"
-            android:textSize="@dimen/calc_text_size_20sp"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <Button
-            android:id="@+id/btnC"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
+            android:id="@+id/btnOne"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_one"
+            android:layout_weight="1.0"/>
 
-            android:text="@string/calc_btn_c"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_two"
+            android:layout_weight="1.0"/>
 
-            <Button
-                android:id="@+id/btnOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_one"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_two"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_three"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnMultiply"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
-                android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_multiply"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_three"
+            android:layout_weight="1.0"/>
 
-            <Button
-                android:id="@+id/btnFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_four"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/BtnFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_five"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnSix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_six"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnDivide"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
-                android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_divide"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnSeven"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_seven"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnEight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_eight"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnNine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_nine"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnPlus"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
-                android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_plus"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnComma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_comma"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnZero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_zero"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:id="@+id/btnResult"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_result"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnMinus"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
-                android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
-                android:layout_weight="1.0"
-                android:text="@string/calc_btn_minus"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:layout_marginStart="@dimen/default_margin_15dp"
+            android:layout_marginTop="@dimen/default_margin_5dp"
+            android:layout_marginEnd="@dimen/default_margin_5dp"
+            android:layout_marginBottom="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_multiply"
+            android:layout_weight="1.0"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_four"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/BtnFive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_five"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_six"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_15dp"
+            android:layout_marginTop="@dimen/default_margin_5dp"
+            android:layout_marginEnd="@dimen/default_margin_5dp"
+            android:layout_marginBottom="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_divide"
+            android:textStyle="bold"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_seven"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_eight"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_nine"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_15dp"
+            android:layout_marginTop="@dimen/default_margin_5dp"
+            android:layout_marginEnd="@dimen/default_margin_5dp"
+            android:layout_marginBottom="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_plus"
+            android:textStyle="bold"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_four"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnComma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_def_comma"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_zero"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnResult"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_result"
+            android:textStyle="bold"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_15dp"
+            android:layout_marginTop="@dimen/default_margin_5dp"
+            android:layout_marginEnd="@dimen/default_margin_5dp"
+            android:layout_marginBottom="@dimen/default_margin_5dp"
+            android:text="@string/calc_btn_minus"
+            android:textStyle="bold"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>

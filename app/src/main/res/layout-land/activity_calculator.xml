@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tvResult"
@@ -22,60 +19,60 @@
             android:layout_height="0dp"
             android:textColor="@color/black"
             android:textSize="@dimen/calc_text_size_20sp"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <Button
             android:id="@+id/btnC"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="bottom"
             android:layout_margin="@dimen/default_margin_5dp"
             android:text="@string/calc_btn_c"
             android:textStyle="bold"
+            android:layout_weight="1.0"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
             tools:layout_editor_absoluteX="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnOne"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_one"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_one"/>
 
             <Button
                 android:id="@+id/btnTwo"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_two"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_two"/>
 
             <Button
                 android:id="@+id/btnThree"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_three"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_three"/>
 
             <Button
                 android:id="@+id/btnMultiply"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
                 android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_multiply"
                 android:textStyle="bold" />
@@ -84,45 +81,44 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnFour"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_four"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_four"/>
 
             <Button
                 android:id="@+id/BtnFive"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_five"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_five"/>
 
             <Button
                 android:id="@+id/btnSix"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_six"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_six" />
 
             <Button
                 android:id="@+id/btnDivide"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
                 android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_divide"
                 android:textStyle="bold" />
@@ -130,99 +126,92 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnSeven"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_seven"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_seven" />
 
             <Button
                 android:id="@+id/btnEight"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_eight"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_eight"/>
 
             <Button
                 android:id="@+id/btnNine"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_nine"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_nine"/>
 
             <Button
                 android:id="@+id/btnPlus"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
                 android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_plus"
-                android:textStyle="bold" />
+                android:text="@string/calc_btn_plus"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnComma"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_comma"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_def_comma"/>
 
             <Button
                 android:id="@+id/btnZero"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_zero"
-                tools:ignore="ButtonStyle" />
+                android:text="@string/calc_btn_zero"/>
 
             <Button
                 android:id="@+id/btnResult"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
+                android:layout_marginEnd="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
-                android:text="@string/calc_btn_result"
-                android:textStyle="bold" />
+                android:text="@string/calc_btn_result"/>
 
             <Button
                 android:id="@+id/btnMinus"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/default_margin_15dp"
-                android:layout_marginTop="@dimen/default_margin_5dp"
+                android:layout_marginStart="@dimen/default_margin_5dp"
                 android:layout_marginEnd="@dimen/default_margin_5dp"
-                android:layout_marginBottom="@dimen/default_margin_5dp"
                 android:layout_weight="1.0"
                 android:text="@string/calc_btn_minus"
                 android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>

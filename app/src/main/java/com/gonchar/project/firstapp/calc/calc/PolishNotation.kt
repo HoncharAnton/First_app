@@ -71,8 +71,8 @@ class PolishNotation {
      */
     private fun addValue(operand: String, symbol: Char) {
         if (Character.isLetter(symbol)) {
-            if (StringParsing().parsArgument()[operand] != null) {
-                polishNotation.add(StringParsing().parsArgument()[operand].toString())
+            if (StringParser().parsArgument()[operand] != null) {
+                polishNotation.add(StringParser().parsArgument()[operand].toString())
             } else {
                 exitProcess(DEFAULT_ERROR_CODE)
             }
