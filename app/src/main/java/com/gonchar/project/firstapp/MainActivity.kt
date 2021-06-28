@@ -16,10 +16,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val main = binding
-        initListener(main)
+        initListener(binding)
 
-        setContentView(main.root)
+        setContentView(binding.root)
         title = getString(R.string.main_tb_title)
     }
 
@@ -28,12 +27,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      */
     private fun initListener(main: ActivityMainBinding) {
 
-        main.btnCalc.setOnClickListener(this)
-        main.btnPic.setOnClickListener(this)
-        main.btnTilesMenu.setOnClickListener(this)
-        main.btnCatsList.setOnClickListener(this)
-        main.btnCalendar.setOnClickListener(this)
-        main.btnAnim.setOnClickListener(this)
+        binding.btnCalc.setOnClickListener(this)
+        binding.btnPic.setOnClickListener(this)
+        binding.btnTaskPic.setOnClickListener(this)
+        binding.btnTilesMenu.setOnClickListener(this)
+        binding.btnCatsList.setOnClickListener(this)
+        binding.btnCalendar.setOnClickListener(this)
+        binding.btnAnim.setOnClickListener(this)
 
     }
 
@@ -50,6 +50,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnPic -> {
                 startActivity(Intent(this, Gallery::class.java))
                 Log.d(TAG, "Gallery button")
+            }
+            R.id.btnTaskPic -> {
+                startActivity(Intent(this, Viewer::class.java ))
             }
             R.id.btnTilesMenu -> {
                 Log.d(TAG, "Tiles Menu button")

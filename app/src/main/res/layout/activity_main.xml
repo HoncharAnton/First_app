@@ -32,6 +32,13 @@
                 android:layout_marginTop="@dimen/default_margin_20dp"
                 android:enabled="true"
                 android:text="@string/main_btn_gallery_title" />
+            <Button
+                android:id="@+id/btnTaskPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_20dp"
+                android:enabled="true"
+                android:text="@string/main_btn_pictures_title" />
 
             <Button
                 android:id="@+id/btnTilesMenu"

@@ -10,6 +10,7 @@
     <string name="main_btn_animation_title">Lottie animation</string>
     <string name="main_btn_cat_title">cats list</string>
     <string name="main_tb_title">Menu</string>
+    <string name="main_btn_pictures_title">Pictures</string>
 
     <!-- calc -->
     <string name="calc_btn_minus">-</string>
@@ -35,7 +36,16 @@
     <!-- gallery -->
     <string name="gal_tb_title">Gallery</string>
 
+    <!-- gall -->
+    <string name="viewer_btn_next_title">Next</string>
+    <string name="viewer_om_item_drawable">Drawable</string>
+    <string name="viewer_om_item_assets">Assets</string>
+    <string name="viewer_om_item_internet">Internet</string>
+    <string name="viewer_tb_title_viewer">Viewer</string>
+
     <!-- error massage -->
     <string name="wrong_math_sequence">Error! Check expression!</string>
+
+
 
 </resources>

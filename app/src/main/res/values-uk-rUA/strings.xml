@@ -10,12 +10,20 @@
     <string name="main_btn_animation_title">Lottie анімація</string>
     <string name="main_btn_cat_title">Котейковий список</string>
     <string name="main_tb_title">Меню</string>
+    <string name="main_btn_pictures_title">Картинки</string>
 
     <!--calc -->
     <string name="calc_tb_title">Калькулятор</string>
 
     <!-- gallery -->
     <string name="gal_tb_title">Гадерея</string>
+
+    <!-- gall -->
+    <string name="viewer_btn_next_title">Далі</string>
+    <string name="viewer_om_item_drawable">Drawable</string>
+    <string name="viewer_om_item_assets">Assets</string>
+    <string name="viewer_om_item_internet">Internet</string>
+    <string name="viewer_tb_title_viewer">Viewer</string>
 
     <!-- error massage -->
     <string name="wrong_math_sequence">Помилка! Перевірте правильність виразу!</string>

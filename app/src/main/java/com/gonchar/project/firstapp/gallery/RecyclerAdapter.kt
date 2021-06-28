@@ -1,51 +1,37 @@
 package com.gonchar.project.firstapp.gallery
 
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.media.Image
 import android.net.Uri
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.gonchar.project.firstapp.Gallery
 import com.gonchar.project.firstapp.R
-import com.gonchar.project.firstapp.utils.Constants.Companion.TAG
 
 
-class RecyclerAdapter(imageURI: ArrayList<Uri>) :
+class RecyclerAdapter(private val uriList: ArrayList<Uri>) :
     RecyclerView.Adapter<RecyclerAdapter.PhotoHolder>() {
 
-    private val image = imageURI
 
-
-    class PhotoHolder(v: View) : View.OnClickListener,
+    class PhotoHolder(v: View) :
         RecyclerView.ViewHolder(v) {
 
         private val view = v.findViewById<ImageView>(R.id.holder)
 
-
         init {
-            view.setOnClickListener(this)
-        }
+            view.setOnClickListener{
 
-        override fun onClick(v: View?) {
-            when (v!!.id) {
 
-                    R.id.holder -> {
-
-                        //
-                        Log.d(TAG, "click item")
-                    }
-
+                Toast.makeText(view.context, "click adapter", Toast.LENGTH_SHORT).show()
             }
-
         }
 
         fun bindPhoto(photo: Uri) {
-            //val bm : Bitmap = BitmapFactory.decodeStream(photo)
             view.findViewById<ImageView>(R.id.holder).setImageURI(photo)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoHolder {
@@ -54,9 +40,9 @@ class RecyclerAdapter(imageURI: ArrayList<Uri>) :
     }
 
     override fun onBindViewHolder(holder: PhotoHolder, position: Int) {
-        val item = image[position]
+        val item = uriList[position]
         holder.bindPhoto(item)
     }
 
-    override fun getItemCount() = image.size
+    override fun getItemCount() = uriList.size
 }

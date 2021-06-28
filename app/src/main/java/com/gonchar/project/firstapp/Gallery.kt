@@ -4,21 +4,23 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.*
+import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import com.gonchar.project.firstapp.databinding.ActivityGalleryBinding
 import com.gonchar.project.firstapp.gallery.RecyclerAdapter
+import com.gonchar.project.firstapp.utils.Constants
 import com.gonchar.project.firstapp.utils.Constants.Companion.RANGE_CORRECTOR_NEGATIVE
 import com.gonchar.project.firstapp.utils.Constants.Companion.REQUEST_CODE
 
 class Gallery : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var linearLayoutManager: LinearLayoutManager
-    private lateinit var binding: ActivityGalleryBinding
-    private var imageURI: ArrayList<Uri> = ArrayList()
-    private lateinit var adapter: RecyclerAdapter
+    //private lateinit var linearLayoutManager: LinearLayoutManager
+    lateinit var binding: ActivityGalleryBinding
+    private var uriList: ArrayList<Uri> = ArrayList()
+    //private lateinit var adapter: RecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +45,8 @@ class Gallery : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.btnAdd -> {
-                imageURI.clear()
-                galleryPicker()
+                uriList.clear()
+                openOpenDocActivity()
             }
         }
     }
@@ -53,7 +55,7 @@ class Gallery : AppCompatActivity(), View.OnClickListener {
      * this method opens system activity with all photo on the device.
      * uses for choice image sequence
      */
-    private fun galleryPicker() {
+    private fun openOpenDocActivity() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
@@ -70,9 +72,9 @@ class Gallery : AppCompatActivity(), View.OnClickListener {
 
                 val count = data.clipData!!.itemCount + RANGE_CORRECTOR_NEGATIVE
                 for (i in 0..count) {
-                    imageURI.add(data.clipData!!.getItemAt(i).uri)
+                    uriList.add(data.clipData!!.getItemAt(i).uri)
                 }
-                makeLine()
+                makeRecViewAdapter()
                 binding.imageView.setImageURI(data.clipData!!.getItemAt(count).uri)
             } else if (data?.data != null) {
                 binding.imageView.setImageURI(data.data)
@@ -81,14 +83,15 @@ class Gallery : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * makeLine method create recycler adapter for recycler view (fills recycler view)
+     * makeRecViewAdapter method create recycler adapter for recycler view (fills recycler view)
      */
-    private fun makeLine() {
+    private fun makeRecViewAdapter() {
 
-        linearLayoutManager = LinearLayoutManager(this)
+        Log.d(Constants.TAG,"makeRecView+++")
+        val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = HORIZONTAL
         binding.recyclerView.layoutManager = linearLayoutManager
-        adapter = RecyclerAdapter(imageURI)
+        val adapter = RecyclerAdapter(uriList)
         binding.recyclerView.adapter = adapter
 
     }
