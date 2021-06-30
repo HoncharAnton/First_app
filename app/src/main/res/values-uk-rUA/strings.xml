@@ -15,6 +15,9 @@
     <!--calc -->
     <string name="calc_tb_title">Калькулятор</string>
 
+    <!-- calc`s error massage -->
+    <string name="wrong_math_sequence">Помилка! Перевірте правильність виразу!</string>
+
     <!-- gallery -->
     <string name="gal_tb_title">Гадерея</string>
 
@@ -25,6 +28,19 @@
     <string name="viewer_om_item_internet">Internet</string>
     <string name="viewer_tb_title_viewer">Viewer</string>
 
-    <!-- error massage -->
-    <string name="wrong_math_sequence">Помилка! Перевірте правильність виразу!</string>
+    <!-- gall`s context menu  -->
+    <string name="context_menu_cropping_circle_title">Коло</string>
+    <string name="context_menu_color_title">Колір</string>
+    <string name="context_menu_blur_title">Розмиття</string>
+    <string name="context_menu_cropping_rect_title">Прямокутник</string>
+    <string name="context_menu_cropping_round_corners_title">Округлення вуглів</string>
+    <string name="context_menu_cropping_title">Підрізання</string>
+    <string name="context_menu_color_sat_min_title">Насиченість 0%</string>
+    <string name="context_menu_color_sat_half_title">Насиченість 50%</string>
+    <string name="context_menu_color_sat_max_title">Насиченість 100%</string>
+    <string name="context_menu_blur_normal_title">Мінімальне</string>
+    <string name="context_menu_blur_solid_title">Легке</string>
+    <string name="context_menu_blur_outer_title">Нормальне</string>
+    <string name="context_menu_blur_inner_title">Максимальне</string>
+
 </resources>

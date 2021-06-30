@@ -13,25 +13,28 @@
     <string name="main_btn_pictures_title">Pictures</string>
 
     <!-- calc -->
-    <string name="calc_btn_minus">-</string>
-    <string name="calc_btn_result">=</string>
-    <string name="calc_btn_zero">0</string>
-    <string name="calc_btn_c">C</string>
-    <string name="calc_btn_plus">+</string>
-    <string name="calc_btn_nine">9</string>
-    <string name="calc_btn_eight">8</string>
-    <string name="calc_btn_seven">7</string>
-    <string name="calc_btn_divide">/</string>
-    <string name="calc_btn_six">6</string>
-    <string name="calc_btn_five">5</string>
-    <string name="calc_btn_four">4</string>
-    <string name="calc_btn_multiply">*</string>
-    <string name="calc_btn_three">3</string>
-    <string name="calc_btn_two">2</string>
-    <string name="calc_btn_one">1</string>
-    <string name="calc_btn_comma">,</string>
-    <string name="calc_def_comma">.</string>
+    <string name="calc_btn_minus" translatable="false">-</string>
+    <string name="calc_btn_result" translatable="false">=</string>
+    <string name="calc_btn_zero" translatable="false">0</string>
+    <string name="calc_btn_c" translatable="false">C</string>
+    <string name="calc_btn_plus" translatable="false">+</string>
+    <string name="calc_btn_nine" translatable="false">9</string>
+    <string name="calc_btn_eight" translatable="false">8</string>
+    <string name="calc_btn_seven" translatable="false">7</string>
+    <string name="calc_btn_divide" translatable="false">/</string>
+    <string name="calc_btn_six" translatable="false">6</string>
+    <string name="calc_btn_five" translatable="false">5</string>
+    <string name="calc_btn_four" translatable="false">4</string>
+    <string name="calc_btn_multiply" translatable="false">*</string>
+    <string name="calc_btn_three" translatable="false">3</string>
+    <string name="calc_btn_two" translatable="false">2</string>
+    <string name="calc_btn_one" translatable="false">1</string>
+    <string name="calc_btn_comma" translatable="false">,</string>
+    <string name="calc_def_comma" translatable="false">.</string>
     <string name="calc_tb_title">Calculator</string>
+
+    <!-- calc`s error massage  -->
+    <string name="wrong_math_sequence">Error! Check expression!</string>
 
     <!-- gallery -->
     <string name="gal_tb_title">Gallery</string>
@@ -43,9 +46,19 @@
     <string name="viewer_om_item_internet">Internet</string>
     <string name="viewer_tb_title_viewer">Viewer</string>
 
-    <!-- error massage -->
-    <string name="wrong_math_sequence">Error! Check expression!</string>
-
-
+    <!-- gall`s context menu -->
+    <string name="context_menu_cropping_circle_title">Circle</string>
+    <string name="context_menu_color_title">Color</string>
+    <string name="context_menu_blur_title">Blur</string>
+    <string name="context_menu_cropping_rect_title">Rectangle</string>
+    <string name="context_menu_cropping_round_corners_title">Rounded corners</string>
+    <string name="context_menu_cropping_title">Cropping</string>
+    <string name="context_menu_color_sat_min_title">Saturation 0%</string>
+    <string name="context_menu_color_sat_half_title">Saturation 50%</string>
+    <string name="context_menu_color_sat_max_title">Saturation 100%</string>
+    <string name="context_menu_blur_normal_title">Light</string>
+    <string name="context_menu_blur_solid_title">Soft</string>
+    <string name="context_menu_blur_outer_title">Normal</string>
+    <string name="context_menu_blur_inner_title">Hard</string>
 
 </resources>

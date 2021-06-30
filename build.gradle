@@ -4,6 +4,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "https://www.jitpack.io" }
+        //https://github.com/Baseflow/PhotoView
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
@@ -18,7 +20,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://www.jitpack.io" }
+        //https://github.com/Baseflow/PhotoView
     }
+
 }
 
 task clean(type: Delete) {

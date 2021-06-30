@@ -1,29 +1,100 @@
 package com.gonchar.project.firstapp
 
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.gonchar.project.firstapp.databinding.ActivityViewerBinding
-
+import jp.wasabeef.glide.transformations.BlurTransformation
 
 class Viewer : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityViewerBinding
     private lateinit var imageList: Array<String>
     private var iterator = 0
+    lateinit var currentImageUrl: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_viewer)
-
         binding = ActivityViewerBinding.inflate(layoutInflater)
         initListener(binding)
-
         setContentView(binding.root)
         title = getString(R.string.viewer_tb_title_viewer)
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        when(v!!.id){
+            binding.viewerIv.id -> menuInflater.inflate(R.menu.iv_shape_menu, menu)
+        }
+        super.onCreateContextMenu(menu, v, menuInfo)
+    }
+
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.rectangle -> {
+                Glide.with(this)
+                    .load(currentImageUrl)
+                    .apply(RequestOptions.overrideOf(800,600))
+                    .into(binding.viewerIv)
+            }
+            R.id.rounded_corner -> {
+                Glide.with(this)
+                    .load(currentImageUrl)
+                    .apply(RequestOptions.bitmapTransform(RoundedCorners(36)))
+                    .into(binding.viewerIv)
+            }
+            R.id.circle -> {
+                Glide.with(this)
+                    .load(currentImageUrl)
+                    .apply(RequestOptions.circleCropTransform())
+                    .into(binding.viewerIv)
+            }
+            R.id.sat_min -> setSaturationFilter(0f)
+            R.id.sat_half -> setSaturationFilter(0.5f)
+            R.id.sat_max -> setSaturationFilter(1f)
+
+            R.id.normal -> setBlurFilter(1)
+            R.id.solid -> setBlurFilter(2)
+            R.id.outer -> setBlurFilter(3)
+            R.id.inner -> setBlurFilter(4)
+        }
+        return super.onContextItemSelected(item)
+    }
+
+    /**
+     * setBlurFilter makes image transformation with blur options and set it to the imageView
+     * @param blurLevel degree of the blur processing
+     */
+    private fun setBlurFilter(blurLevel: Int) {
+        Glide.with(this)
+            .load(currentImageUrl)
+            .apply(RequestOptions.bitmapTransform(BlurTransformation(5,blurLevel)))
+            .into(binding.viewerIv)
+    }
+
+    /**
+     * setImageFilter creates image filter (saturation) ans set it to the imageView
+     * @param satLevel it is saturation level value
+     */
+    private fun setSaturationFilter(satLevel: Float) {
+        val colorMatrix = ColorMatrix()
+        colorMatrix.setSaturation(satLevel)
+        val filter = ColorMatrixColorFilter(colorMatrix)
+        binding.viewerIv.colorFilter = filter
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -36,7 +107,6 @@ class Viewer : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when(item.title){
             getString(R.string.viewer_om_item_drawable) -> {
                 imageList = arrayOf(
@@ -66,10 +136,16 @@ class Viewer : AppCompatActivity(), View.OnClickListener {
                 )
             }
         }
+        registerForContextMenu(binding.viewerIv)
         binding.btnNext.isEnabled = true
+        changeImageViewContent()
+        iterator = 1
         return super.onOptionsItemSelected(item)
     }
 
+    /**
+     * this method set clickListener to element which needed be clickable
+     */
     private fun initListener(binding: ActivityViewerBinding) {
         binding.btnNext.setOnClickListener(this)
     }
@@ -77,8 +153,8 @@ class Viewer : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.btnNext -> {
-                checkIterator()
                 changeImageViewContent()
+                iterator++
             }
         }
     }
@@ -87,8 +163,9 @@ class Viewer : AppCompatActivity(), View.OnClickListener {
      * changeImageViewContent method changes displayed content in the field for displayed image
      */
     private fun changeImageViewContent() {
-        Glide.with(this).load(imageList[iterator]).into(binding.imageView2)
-        iterator++
+        checkIterator()
+        Glide.with(this).load(imageList[iterator]).into(binding.viewerIv)
+        currentImageUrl = imageList[iterator]
     }
 
     /**

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cropping"
+        android:title="@string/context_menu_cropping_title" >
+        <menu >
+            <item android:id="@+id/circle"
+                android:title="@string/context_menu_cropping_circle_title" />
+
+            <item android:id="@+id/rectangle"
+                android:title="@string/context_menu_cropping_rect_title" />
+
+            <item android:id="@+id/rounded_corner"
+                android:title="@string/context_menu_cropping_round_corners_title" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/color"
+        android:title="@string/context_menu_color_title" >
+        <menu >
+            <item android:id="@+id/sat_min"
+                android:title="@string/context_menu_color_sat_min_title" />
+
+            <item android:id="@+id/sat_half"
+                android:title="@string/context_menu_color_sat_half_title" />
+
+            <item android:id="@+id/sat_max"
+                android:title="@string/context_menu_color_sat_max_title" />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/blur"
+        android:title="@string/context_menu_blur_title" >
+        <menu >
+            <item android:id="@+id/normal"
+                android:title="@string/context_menu_blur_normal_title" />
+
+            <item android:id="@+id/solid"
+                android:title="@string/context_menu_blur_solid_title" />
+
+            <item android:id="@+id/outer"
+                android:title="@string/context_menu_blur_outer_title" />
+
+            <item android:id="@+id/inner"
+                android:title="@string/context_menu_blur_inner_title" />
+
+        </menu>
+    </item>
+
+</menu>

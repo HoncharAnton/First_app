@@ -6,15 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Viewer">
 
+    <!--<com.github.chrisbanes.photoview.PhotoView -->
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/viewer_iv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/choice_logo" />
+        app:srcCompat="@drawable/choice_logo"
+        android:adjustViewBounds="true"
+        android:layout_margin="@dimen/default_margin_20dp"
+        android:clickable="true"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/btnNext"
@@ -24,4 +29,6 @@
         android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
