@@ -61,4 +61,17 @@
     <string name="context_menu_blur_outer_title">Normal</string>
     <string name="context_menu_blur_inner_title">Hard</string>
 
+    <!-- redactor -->
+    <string name="redactor_tb_title">simple SVG redactor</string>
+
+    <!-- tiles -->
+    <string name="tiles_user_title">Hello User!</string>
+    <string name="tiles_balance_title">balance: 1000$</string>
+    <string name="tiles_journal_title">Journal</string>
+    <string name="tiles_payments_title">Payments</string>
+    <string name="tiles_basket_title">Payment box</string>
+    <string name="tiles_charity_title">Charity</string>
+    <string name="tiles_settings_title">Settings</string>
+    <string name="tiles_exit_title">Exit</string>
+    <string name="tiles_support_title">Support</string>
 </resources>

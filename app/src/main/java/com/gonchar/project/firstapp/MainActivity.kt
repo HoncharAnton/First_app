@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, Viewer::class.java ))
             }
             R.id.btnTilesMenu -> {
-                Log.d(TAG, "Tiles Menu button")
+                startActivity(Intent(this, Tiles::class.java))
             }
             R.id.btnCatsList -> {
                 Log.d(TAG, "Cats List button")
@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnAnim -> {
                 Log.d(TAG, "animation button")
             }
+
         }
     }
 }

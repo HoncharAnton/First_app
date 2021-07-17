@@ -43,4 +43,17 @@
     <string name="context_menu_blur_outer_title">Нормальне</string>
     <string name="context_menu_blur_inner_title">Максимальне</string>
 
+    <!-- redactor -->
+    <string name="redactor_tb_title">Простий редактор SVG</string>
+
+    <!-- tiles -->
+    <string name="tiles_user_title">Вітаємо User!</string>
+    <string name="tiles_balance_title">Баланс: 1000$</string>
+    <string name="tiles_journal_title">Журнал</string>
+    <string name="tiles_payments_title">Платежі</string>
+    <string name="tiles_basket_title">Корзина платежів</string>
+    <string name="tiles_charity_title">Благочинність</string>
+    <string name="tiles_settings_title">Налаштування</string>
+    <string name="tiles_exit_title">Вихід</string>
+    <string name="tiles_support_title">Тех.підтримка</string>
 </resources>
