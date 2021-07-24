@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp">
-        <activity android:name=".Tiles"
+        <activity
+            android:name=".CatList"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".Tiles"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Viewer" />
         <activity android:name=".Gallery" />

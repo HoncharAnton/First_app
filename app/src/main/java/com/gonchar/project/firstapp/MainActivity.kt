@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, Tiles::class.java))
             }
             R.id.btnCatsList -> {
-                Log.d(TAG, "Cats List button")
+                startActivity(Intent(this, CatList::class.java))
             }
             R.id.btnCalendar -> {
                 Log.d(TAG, "calendar button")
