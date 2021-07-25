@@ -56,4 +56,8 @@
     <string name="tiles_settings_title">Налаштування</string>
     <string name="tiles_exit_title">Вихід</string>
     <string name="tiles_support_title">Тех.підтримка</string>
+
+    <!-- cat list -->
+    <string name="cat_list_btn_title">Перелік</string>
+    <string name="cats_list_toolbar_title">Cats List</string>
 </resources>

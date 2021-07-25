@@ -1,34 +1,52 @@
 package com.gonchar.project.firstapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.gonchar.project.firstapp.cat_list.CatListGridAdapter
 import com.gonchar.project.firstapp.cat_list.CatListRecAdapter
 import com.gonchar.project.firstapp.databinding.ActivityCatListBinding
 
-class CatList : AppCompatActivity() {
+class CatList : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var binding: ActivityCatListBinding
+    private lateinit var binding: ActivityCatListBinding
     private val titleList = ArrayList<String>()
     private val addressList = ArrayList<String>()
-
+    private var switch : Byte = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCatListBinding.inflate(layoutInflater)
         readFileAsLines("cat.txt")
-
+        setListener()
         makeRecViewAdapter()
         setContentView(binding.root)
-
-
     }
 
+    /**
+     * setListener method initializes listener for some UI elements
+     */
+    private fun setListener() {
+        binding.btnList.setOnClickListener(this)
+    }
+
+    /**
+     * makeRecViewAdapter method create and set adapter for the recycler view
+     */
     private fun makeRecViewAdapter() {
         val linearLayoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = linearLayoutManager
         val adapter = CatListRecAdapter(titleList,addressList,this)
         binding.recyclerView.adapter = adapter
+    }
+
+    /**
+     * makeGridViewAdapter method create and set adapter for the grid view
+     */
+    private fun makeGridViewAdapter(){
+        val adapter = CatListGridAdapter(this, addressList)
+        binding.gridView.adapter = adapter
     }
 
     /**
@@ -52,4 +70,33 @@ class CatList : AppCompatActivity() {
         addressList.add(temp.last())
     }
 
+    /**
+     * onClick realizes click logic for some UI elements
+     * @param v - view, which was clicked
+     */
+    override fun onClick(v: View?) {
+        when(v!!.id){
+            R.id.btnList -> {
+                if (switch == 0.toByte()){
+                    switch = 1
+                    makeGridViewAdapter()
+                    viewSwitcher(binding.recyclerView,binding.gridView)
+                }else{
+                    switch = 0
+                    makeRecViewAdapter()
+                    viewSwitcher(binding.gridView,binding.recyclerView)
+                }
+            }
+        }
+    }
+
+    /**
+     * viewSwitcher method changes view (changes visibility parameters of the views)
+     * @param offView - View for turn off
+     * @param onView - View for turn on
+     */
+    private fun viewSwitcher(offView : View, onView : View) {
+        offView.visibility = View.GONE
+        onView.visibility = View.VISIBLE
+    }
 }

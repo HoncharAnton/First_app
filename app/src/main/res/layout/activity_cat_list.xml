@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_margin_20dp"
-        android:text="Cats List"
+        android:text="@string/cats_list_toolbar_title"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintStart_toStartOf="@+id/toolbar2"
         app:layout_constraintTop_toTopOf="@+id/toolbar2" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/default_margin_20dp"
         android:background="@drawable/round_button"
-        android:text="@string/cat_list_switch_title"
+        android:text="@string/cat_list_btn_title"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,12 +41,26 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="@dimen/default_margin_20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/default_margin_20dp"
+        android:numColumns="2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

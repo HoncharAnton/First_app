@@ -74,5 +74,8 @@
     <string name="tiles_settings_title">Settings</string>
     <string name="tiles_exit_title">Exit</string>
     <string name="tiles_support_title">Support</string>
-    <string name="cat_list_switch_title">List</string>
+
+    <!-- cat list -->
+    <string name="cat_list_btn_title">List</string>
+    <string name="cats_list_toolbar_title">Cats List</string>
 </resources>
